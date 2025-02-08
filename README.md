@@ -1,5 +1,5 @@
 
-credits : https://github.com/Hari-Hara-2005
+
 
 # College Cultural Program Website
 
