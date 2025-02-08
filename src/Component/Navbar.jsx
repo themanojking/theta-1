@@ -110,7 +110,7 @@ export default function Navbar(props) {
             <Stack direction="row" width="100%" sx={{ display: ["flex", "flex", "none"], justifyContent: "space-between" }}>
               <Link to="/">
                 <ImageListItem>
-                  <Box component="img" src="/Assets/logo.png" sx={{ width: "10%", ml: 2 }} alt="logo" />
+                  <Box component="img" src="/Assets/logo1.png" sx={{ width: "10%", ml: 2 }} alt="logo" />
                 </ImageListItem>
               </Link>
               <IconButton onClick={handleDrawerToggle} color="inherit">
