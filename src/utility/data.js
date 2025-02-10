@@ -36,7 +36,7 @@ export const slides = [
     path:'/Day1'
   },
   {
-    img: "Assets/bg-2.png",
+    img: "Assets/dj.png",
     title: "THETA Day 2",
     topic: "DJ and Team Recoil",
     des: "Recoil in Action : Feel the Energy with Team Recoil's Electrifying Performance",
