@@ -244,7 +244,7 @@ const ContactUs = () => {
                                 px: [2, 4],
                             }}
                         >
-                            <Box
+                       /*     <Box
                                 sx={{
                                     bgcolor: '#D3D6DB ',
                                     boxShadow: "0 8px 16px rgba(0, 0, 0, 0.4)",
@@ -286,7 +286,7 @@ const ContactUs = () => {
                             </Box>
                         </Box>
                     </Box>
-                </Box>
+                </Box>*/
                 <Footer />
             </ThemeProvider>
         </>
