@@ -226,48 +226,8 @@ const ContactUs = () => {
                             ))}
                         </Grid>
                     </Box>
-                    <Box sx={{ pt: 5 }}>
-                        <Typography data-aos="zoom-in-up" data-aos-duration="2000" sx={{ fontSize: ['30px', '46px'], fontWeight: 600, color: '#fff', textAlign: 'center', lineHeight: 1.4, my: 8 }}>Get in Touch with Theta Cultural Program</Typography>
-                    </Box>
-                    <Box
-                        sx={{ pb: 10 }}
-                        data-aos="fade-down"
-                        data-aos-duration="2500"
-                    >
-                        <Box
-                            sx={{
-                                display: 'flex',
-                                justifyContent: 'center',
-                                alignItems: 'center',
-                                gap: [2, 4, 10],
-                                flexWrap: 'wrap',
-                                px: [2, 4],
-                            }}
-                        >
-                         <Box
-                                sx={{
-                                    bgcolor: '#D3D6DB ',
-                                    boxShadow: "0 8px 16px rgba(0, 0, 0, 0.4)",
-                                    width: ['100%', '100%', '100%', '680px'],
-                                    height: ['auto', 'auto', 'auto', '729px'],
-                                    p: [2, 5, 8],
-                                    mb: [4, 0],
-                                }}
-                            >
-                                <Typography
-                                    sx={{
-                                        mb: [4, 6, 8],
-                                        fontWeight: '600',
-                                        fontSize: ['18px', '22px', '24px'],
-                                        width: ['100%', '80%', '65%'],
-                                    }}
-                                >
-                                    Seamless Collaboration for Event Success
-                                </Typography>
-                                
-                            </Box>
-                        </Box>
-                    </Box>
+                    
+                   
                 </Box>
                 <Footer />
             </ThemeProvider>
