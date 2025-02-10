@@ -14,6 +14,7 @@ import Day3 from './Pages/EventsPages/Day3';
 import ContactUs from './Pages/ContactUs';
 import Workshops from './Pages/Workshops';
 import Developers from './Pages/Developers ';
+import Cluster from './Pages/Cluster';
 function App() {
   useEffect(() => {
     AOS.init({ duration: 1000 });
@@ -33,6 +34,7 @@ function App() {
         <Route path='/Day3' element={<Day3 />} />
         <Route path='/Workshops' element={<Workshops />} />
         <Route path='/Developers' element={<Developers />} />
+        <Route path='/Cluster' element={<Cluster />} />
       </Routes>
     </BrowserRouter>
   );

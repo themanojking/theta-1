@@ -8,6 +8,7 @@ import Navbar from '../Component/Navbar'
 import Clusters from '../Component/Clusters'
 import Review from '../Component/Review'
 import Footer from '../Component/Footer'
+import Allclusters from '../Component/Allclusters'
 const Home = () => {
     return (
         <>
@@ -15,11 +16,17 @@ const Home = () => {
                 <Carousel />
                 <Navbar color="#fff" />
             </Box>
-            <Box sx={{ bgcolor: "#000212", py: 10 }}>
+            <Box sx={{ display: { xs: 'none', md: 'block' } }}>
                 <TitleWithDescription
                     title="Visit our Clusters"
                 />
-                <Clusters />
+                <Clusters />  
+            </Box>
+            <Box sx={{ display: { xs: 'block', md: 'none' } }}>
+                <TitleWithDescription
+                    title="Visit our Clusters"
+                />
+                <Allclusters/>  
             </Box>
             <Box>
                 <Review />

@@ -18,10 +18,10 @@ import {
   useScrollTrigger,
   Slide,
   CssBaseline,
+  useMediaQuery,
+  useTheme,
 } from "@mui/material";
 import { Link } from "react-router-dom";
- 
-
 
 function HideOnScroll(props) {
   const { children, window } = props;
@@ -44,6 +44,8 @@ export default function Navbar(props) {
   const { color } = props;
   const [isDown, setIsDown] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const theme = useTheme();
+  const isMdUp = useMediaQuery(theme.breakpoints.up('md'));
 
   useEffect(() => {
     const handleScroll = () => {
@@ -60,11 +62,14 @@ export default function Navbar(props) {
 
   const navItems = [
     { link: "/", name: "Home" },
-  /*  { link: "/AllEvents", name: "Events" }, */
     { link: "/Workshops", name: "Workshops" },
     { link: "/ContactUs", name: "Contact Us" },
     { link: "/Developers", name: "Developers" },
   ];
+
+  if (!isMdUp) {
+    navItems.push({ link: "/Cluster", name: "Cluster" });
+  }
 
   const drawer = (
     <Stack direction="column">
