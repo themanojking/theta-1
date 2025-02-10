@@ -1,9 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
-import { Box, Button, Typography, IconButton, Container } from "@mui/material";
-import { ArrowBackIos, ArrowForwardIos } from "@mui/icons-material";
+import { Box, Typography } from "@mui/material";
 import { keyframes } from "@emotion/react";
 import { slides } from "../utility/data";
-import ArrowCircleRightIcon from "@mui/icons-material/ArrowCircleRight";
+
 const AUTO_PLAY_INTERVAL = 7000;
 const TRANSITION_DURATION = 3000;
 
@@ -39,17 +38,6 @@ const Carousel = () => {
     };
   }, [currentIndex]);
 
-  const nextSlide = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === slides.length - 1 ? 0 : prevIndex + 1
-    );
-  };
-
-  const prevSlide = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? slides.length - 1 : prevIndex - 1
-    );
-  };
   return (
     <Box
       sx={{
@@ -128,57 +116,26 @@ const Carousel = () => {
                 >
                   {slide.topic}
                 </Typography>
-                  <Typography
-                    variant="h6"
-                    sx={{ marginTop: "20px", lineHeight: "1.5em" }}
-                  >
-                    {slide.des}
-                  </Typography>
-                <Box
-                  sx={{
-                    display: "grid",
-                    gridTemplateColumns: { xs: "1fr", sm: "repeat(2, 250px)" },
-                    gridTemplateRows: "40px",
-                    gap: "5px",
-                    marginTop: "20px",
-                  }}
+                <Typography
+                  variant="h6"
+                  sx={{ marginTop: "20px", lineHeight: "1.5em" }}
                 >
-                    {/* <Button
-                    variant="contained"
-                    endIcon={<ArrowCircleRightIcon />}
-                    href={slide.path}
-                    sx={{
-                      background: `linear-gradient(91.83deg, rgb(255, 81, 47) 0%, rgb(221, 36, 118) 100%)`,
-                      textTransform: "none",
-                      borderRadius: "50px",
-                      fontSize: "1rem",
-                      px: [4],
-                      color: "#fff",
-                      zIndex: 1,
-                      border: "2px solid transparent",
-                      "&:hover": {
-                        background: "transparent",
-                        border: "2px solid #EF3D4E",
-                      },
-                    }}
-                  >
-                    See More
-                  </Button> */}
-                </Box>
+                  {slide.des}
+                </Typography>
               </Box>
             </Box>
           ))}
         </Box>
+
         <Box
           sx={{
             position: "absolute",
-            bottom: ["20px", "50px"],
-            left: ["80%", "50%"],
+            bottom: ["10px", "30px"],
+            left: "50%",
             transform: "translateX(-50%)",
             display: "flex",
-            gap: "20px",
+            gap: "10px",
             zIndex: 100,
-            padding: "0 20px",
             overflowX: "auto",
             scrollSnapType: "x mandatory",
             "&::-webkit-scrollbar": {
@@ -191,17 +148,17 @@ const Carousel = () => {
               key={index}
               onClick={() => setCurrentIndex(index)}
               sx={{
-                width: { xs: "100px", sm: "150px" },
-                height: { xs: "150px", sm: "220px" },
+                width: { xs: "70px", sm: "100px" },
+                height: { xs: "100px", sm: "150px" },
                 flexShrink: 0,
                 position: "relative",
                 cursor: "pointer",
-                borderRadius: "20px",
+                borderRadius: "10px",
                 overflow: "hidden",
                 border:
                   index === currentIndex
-                    ? "5px solid #6249CE"
-                    : "5px solid transparent",
+                    ? "3px solid #6249CE"
+                    : "3px solid transparent",
                 transition: "transform 0.3s",
                 scrollSnapAlign: "start",
                 "&:hover img": {
@@ -220,72 +177,10 @@ const Carousel = () => {
                   transition: "transform 0.3s",
                 }}
               />
-              <Box
-                sx={{
-                  position: "absolute",
-                  bottom: "10px",
-                  left: "10px",
-                  right: "10px",
-                  color: "#fff",
-                }}
-              >
-                <Typography sx={{ fontSize: "18px", fontWeight: 500 }}>
-                  {slide.thumbnailtitle}
-                </Typography>
-                <Typography sx={{ fontSize: "12px", fontWeight: 300 }}>
-                  {slide.thumbnaildesc}
-                </Typography>
-              </Box>
             </Box>
           ))}
         </Box>
 
-        {/* <Box
-          sx={{
-            position: "absolute",
-            top: "80%",
-            left: "50%",
-            transform: "translateX(-50%)",
-            display: "flex",
-            gap: "10px",
-            zIndex: 100,
-            maxWidth: "30%",
-            width: "300px",
-          }}
-        >
-          <IconButton
-            onClick={prevSlide}
-            sx={{
-              width: "40px",
-              height: "40px",
-              borderRadius: "50%",
-              backgroundColor: "rgba(238, 238, 238, 0.25)",
-              color: "#fff",
-              "&:hover": {
-                backgroundColor: "#fff",
-                color: "#000",
-              },
-            }}
-          >
-            <ArrowBackIos />
-          </IconButton>
-          <IconButton
-            onClick={nextSlide}
-            sx={{
-              width: "40px",
-              height: "40px",
-              borderRadius: "50%",
-              backgroundColor: "rgba(238, 238, 238, 0.25)",
-              color: "#fff",
-              "&:hover": {
-                backgroundColor: "#fff",
-                color: "#000",
-              },
-            }}
-          >
-            <ArrowForwardIos />
-          </IconButton>
-        </Box> */}
         <Box
           sx={{
             position: "absolute",
