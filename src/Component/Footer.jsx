@@ -198,7 +198,7 @@ const Footer = () => {
 
         <Box textAlign="center" mt={5}>
           <Typography variant="body2">
-            Copyright © 2024 Theta | Designed and Developed by{" "}
+            Copyright © 2025 Theta | Designed and Developed by{" "}
             <a
             
               style={{
