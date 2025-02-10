@@ -20,7 +20,7 @@ const Developers = () => {
         <>
             <Box sx={{ backgroundColor: "#0B1121", color: "white", padding: "50px 10rem", textAlign: 'center' }}>
                 <Navbar color="#fff" />
-                <Typography sx={{ fontWeight: "bold", fontSize: "36px", my: 2 }}>Developers</Typography>
+                <Typography sx={{ fontWeight: "bold", fontSize: "36px", my: 2, mx:2 }}>Developers</Typography>
                 <Box sx={{ display: 'flex', gap: 1, justifyContent: 'center', pb: 5 }}>
                     <Link to="/" style={{ textDecoration: "none" }}><Typography sx={{ color: "#9A9EA1", fontWeight: "bold", fontSize: '18px' }}>Home</Typography></Link>
                     <ArrowRightAltIcon sx={{ color: "#9A9EA1" }} />
