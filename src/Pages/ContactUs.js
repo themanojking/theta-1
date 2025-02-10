@@ -226,7 +226,7 @@ const ContactUs = () => {
                             ))}
                         </Grid>
                     </Box>
-                    <Box sx={{ pt: 5 }}>
+                  /*  <Box sx={{ pt: 5 }}>
                         <Typography data-aos="zoom-in-up" data-aos-duration="2000" sx={{ fontSize: ['30px', '46px'], fontWeight: 600, color: '#fff', textAlign: 'center', lineHeight: 1.4, my: 8 }}>Get in Touch with Theta Cultural Program</Typography>
                     </Box>
                     <Box
@@ -243,8 +243,8 @@ const ContactUs = () => {
                                 flexWrap: 'wrap',
                                 px: [2, 4],
                             }}
-                        >
-                       /*     <Box
+                        >*/
+                       /* <Box
                                 sx={{
                                     bgcolor: '#D3D6DB ',
                                     boxShadow: "0 8px 16px rgba(0, 0, 0, 0.4)",
