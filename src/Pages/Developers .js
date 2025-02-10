@@ -18,13 +18,53 @@ const Developers = () => {
 
     return (
         <>
-            <Box sx={{ backgroundColor: "#0B1121", color: "white", padding: "50px 10rem", textAlign: 'center' }}>
+        
+        <Box
+                sx={{
+                    position: "relative",
+                    backgroundImage: "url(Assets/Logo.png)",
+                    backgroundSize: "40%",
+                    backgroundPosition: "center",
+                    backgroundRepeat: "no-repeat",
+                    backgroundColor: "#0B1121",
+                    color: "white",
+                    padding: { xs: "30px 1rem", md: "50px 10rem" },
+                    height: { xs: "50vh", md: "55vh" },
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    zIndex: 1,
+                    "&::before": {
+                        content: '""',
+                        position: "absolute",
+                        top: 0,
+                        left: 0,
+                        width: "100%",
+                        height: "100%",
+                        backgroundColor: "#0B1121",
+                        opacity: 0.85,
+                        zIndex: -1,
+                    },
+                }}
+            >
                 <Navbar color="#fff" />
-                <Typography sx={{ fontWeight: "bold", fontSize: "36px", my: 2, mx:2 }}></Typography>
-                <Box sx={{ display: 'flex', gap: 1, justifyContent: 'center', pb: 5 }}>
-                    <Link to="/" style={{ textDecoration: "none" }}><Typography sx={{ color: "#9A9EA1", fontWeight: "bold", fontSize: '18px' }}>Home</Typography></Link>
-                    <ArrowRightAltIcon sx={{ color: "#9A9EA1" }} />
-                    <Typography sx={{ color: "#9A9EA1", fontWeight: "bold", fontSize: '18px' }}>Developers</Typography>
+                <Box>
+                    <Typography
+                        sx={{
+                            color: "#fff",
+                            fontWeight: "bold",
+                            fontSize: ["20px", "22px", "36px"],
+                            my: 1,
+                            textAlign: 'center'
+                        }}
+                    >
+                        Our Developers
+                    </Typography>
+                    <Box sx={{ display: 'flex', gap: 1, alignItems: 'center', justifyContent: 'center', pb:5 }}>
+                        <Link to="/" style={{ textDecoration: "none" }} ><Typography sx={{ color: "#9A9EA1", fontWeight: "bold", fontSize: '18px' }}>Home</Typography></Link>
+                        <ArrowRightAltIcon sx={{ color: "#9A9EA1", fontWeight: "bold", fontSize: '36px' }} />
+                        <Typography sx={{ color: "#9A9EA1", fontWeight: "bold", fontSize: '18px' }}>Developers</Typography>
+                    </Box>
                 </Box>
             </Box>
             <Box sx={{ py: 5, bgcolor: '#000212', textAlign: 'center' }}>

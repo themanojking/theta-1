@@ -46,7 +46,7 @@ const Workshops = () => {
                 sx={{
                     position: "relative",
                     backgroundImage: "url(Assets/Logo.png)",
-                    backgroundSize: "20%",
+                    backgroundSize: "40%",
                     backgroundPosition: "center",
                     backgroundRepeat:'no-repeat',
                     color: "white",
