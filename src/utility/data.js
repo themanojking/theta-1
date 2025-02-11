@@ -22,7 +22,7 @@ export const slides = [
     des: "FUSION of ideas, FUN-filled experiences, and a grand FIESTA of celebration.",
     buttons: ["SEE MORE"],
     thumbnailtitle: "Day",
-    thumbnaildesc: "Fusion Fun Fiesta",
+    thumbnaildesc: "",
     path:'/AllEvents'
   },
   {
@@ -32,7 +32,7 @@ export const slides = [
     des: "Musical Fusion : Unleash the Rhythm with Our Music Teams",
     buttons: ["SEE MORE"],
     thumbnailtitle: "Day 1",
-    thumbnaildesc: "DJ and Team Swaraag",
+    thumbnaildesc: "",
     path:'/Day1'
   },
   {
@@ -42,7 +42,7 @@ export const slides = [
     des: "Recoil in Action : Feel the Energy with Team Recoil's Electrifying Performance",
     buttons: ["SEE MORE"],
     thumbnailtitle: "Day 2",
-    thumbnaildesc: " DJ and Team Recoil",
+    thumbnaildesc: " ",
      path:'/Day2'
   },
   {
@@ -52,7 +52,7 @@ export const slides = [
     des: "Pro Nite : Experience the Ultimate Night of Fun and Excitement!",
     buttons: ["SEE MORE"],
     thumbnailtitle: "Day 3",
-    thumbnaildesc: "Pro Nite",
+    thumbnaildesc: "",
      path:'/Day3'
   },
 ];
