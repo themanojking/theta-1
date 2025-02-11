@@ -9,45 +9,26 @@ const Day1 = () => {
 
     const contestData = [
         {
-            title: 'Theta 2k24 Film Festival',
-            lastDate: '01:00 p.m. - 4:00 p.m. | Venue: 202',
-            submissionDates: 'Film Studies',
+            title: 'celebrating Soon',
+            lastDate: 'Launching soon',
+            submissionDates: '',
         },
         {
-            title: 'Photography Challenge',
-            lastDate: '9:00 a.m. - 12:00 p.m. | Venue: 303',
-            submissionDates: 'Art & Design',
+            title: 'celebrating Soon',
+            lastDate: 'Launching soon',
+            submissionDates: '',
         },
         {
-            title: 'Innovative Tech Expo',
-            lastDate: '2:00 p.m. - 5:00 p.m. | Venue: LAB-1',
-            submissionDates: 'Technology',
+            title: 'celebrating Soon',
+            lastDate: 'Launching soon',
+            submissionDates: '',
         },
         {
-            title: 'Creative Writing Contest',
-            lastDate: '10:00 a.m. - 1:00 p.m. | Venue: 401',
-            submissionDates: 'Literature',
+            title: 'celebrating Soon',
+            lastDate: 'Launching soon',
+            submissionDates: '',
         },
-        {
-            title: 'Science Fair',
-            lastDate: '11:00 a.m. - 2:00 p.m. | Venue: 106 & 107',
-            submissionDates: 'Science & Innovation',
-        },
-        {
-            title: 'Music Band Competition',
-            lastDate: '10:00 a.m. - 1:00 p.m. | Venue: Auditorium',
-            submissionDates: 'Performing Arts',
-        },
-        {
-            title: 'Math Olympiad',
-            lastDate: '1:00 p.m. - 3:00 p.m. | Venue: 416',
-            submissionDates: 'Mathematics',
-        },
-        {
-            title: 'Coding Hackathon',
-            lastDate: '10:00 a.m. - 1:00 p.m. | Venue: LAB-2',
-            submissionDates: 'Computer Science',
-        },
+        
     ];
     
     return (

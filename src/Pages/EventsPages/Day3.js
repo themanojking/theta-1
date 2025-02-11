@@ -10,45 +10,27 @@ const Day3 = () => {
   
     const contestData = [
         {
-            title: 'CELEBRATING SOON',
-            lastDate: 'CELEBRATING SOON',
-            submissionDates: 'Strategia',
+            title: 'celebrating Soon',
+            lastDate: 'Launching soon',
+            submissionDates: '',
         },
         {
-            title: 'CELEBRATING SOON',
-            lastDate: 'CELEBRATING SOONt',
-            submissionDates: 'Robotics',
+            title: 'celebrating Soon',
+            lastDate: 'Launching soon',
+            submissionDates: '',
         },
         {
-            title: 'Code Hunt',
-            lastDate: '2:00 p.m. - 5:00 p.m. | Venue: LAB-2',
-            submissionDates: 'Informatica',
+            title: 'celebrating Soon',
+            lastDate: 'Launching soon',
+            submissionDates: '',
         },
         {
-            title: 'Capture Caption Captivate',
-            lastDate: '10:00 a.m. - 1:00 p.m. | Venue: 401',
-            submissionDates: 'Equilibria',
+            title: 'celebrating Soon',
+            lastDate: 'Launching soon',
+            submissionDates: '',
         },
-        {
-            title: 'Neenga Vandha Mattum',
-            lastDate: '11:00 a.m. - 1:00 p.m. | Venue: 106 & 107',
-            submissionDates: 'Equilibria',
-        },
-        {
-            title: 'Technical Pick and Talk',
-            lastDate: '10:00 a.m. - 1:00 p.m. | Venue: 406',
-            submissionDates: 'Electronica',
-        },
-        {
-            title: 'Fun Max',
-            lastDate: '1:00 p.m. - 3:00 p.m. | Venue: 416',
-            submissionDates: 'Biogenesis',
-        },
-        {
-            title: 'Logic and Ladder',
-            lastDate: '10:00 a.m. - 1:00 p.m. | Venue: LAB-2',
-            submissionDates: 'Informatica',
-        },
+       
+      
     ];
     return (
         <>

@@ -10,20 +10,20 @@ const Day2 = () => {
 
     const contestData = [
         {
-            title: 'Escape Room',
-            lastDate: '10:00 a.m. - 1:00 p.m. | Venue: 406',
-            submissionDates: 'Strategia',
+            title: 'celebrating Soon',
+            lastDate: 'Launching soon',
+            submissionDates: '',
         },
         {
-            title: 'Robo-Saga',
-            lastDate: '9:30 a.m. - 1:30 p.m. | Venue: Basketball Court',
-            submissionDates: 'Robotics',
+            title: 'celebrating Soon',
+            lastDate: 'Launching soon',
+            submissionDates: '',
         },
         {
-            title: 'Code Hunt',
-            lastDate: '2:00 p.m. - 5:00 p.m. | Venue: LAB-2',
-            submissionDates: 'Informatica',
-        }
+            title: 'celebrating Soon',
+            lastDate: 'Launching soon',
+            submissionDates: '',
+        },
     ];
     return (
         <>
