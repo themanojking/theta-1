@@ -62,14 +62,13 @@ export default function Navbar(props) {
 
   const navItems = [
     { link: "/", name: "Home" },
+    !isMdUp && { link: "/Cluster", name: "Cluster" },
     { link: "/Workshops", name: "Workshops" },
     { link: "/ContactUs", name: "Contact Us" },
     { link: "/Developers", name: "Developers" },
-  ];
+  ].filter(Boolean);
 
-  if (!isMdUp) {
-    navItems.push({ link: "/Cluster", name: "Cluster" });
-  }
+
 
   const drawer = (
     <Stack direction="column">
