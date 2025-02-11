@@ -173,7 +173,7 @@ const Allclusters = () => {
       title: "",
       imgSrc: "Assets/cluster.png",
       subtitle: "Our clusters",
-      description: "Empowering students for a innovative future.",
+      description: "Click that to see more",
       path: "/Cluster",
     },
     
