@@ -172,8 +172,8 @@ const Allclusters = () => {
     {
       title: "",
       imgSrc: "Assets/cluster.png",
-      subtitle: "Our clusters",
-      description: "Click that to see more",
+      subtitle: "Fusion,Fun,Fiesta",
+      description: "Click to uncover something amazing!",
       path: "/Cluster",
     },
     
