@@ -1,7 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
-import { Box, Typography } from "@mui/material";
+import { Box, Button, Typography, useTheme } from "@mui/material";
 import { keyframes } from "@emotion/react";
 import { slides } from "../utility/data";
+import ArrowCircleRightIcon from "@mui/icons-material/ArrowCircleRight";
 
 const AUTO_PLAY_INTERVAL = 7000;
 const TRANSITION_DURATION = 3000;
@@ -18,6 +19,7 @@ const progressAnimation = keyframes`
 const Carousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const timeoutRef = useRef(null);
+  const theme = useTheme();  // Accessing MUI theme for breakpoints
 
   const resetTimeout = () => {
     if (timeoutRef.current) {
@@ -47,13 +49,14 @@ const Carousel = () => {
         fontSize: "12px",
         margin: 0,
         position: "relative",
+        height: "100vh", // Ensures the height is full screen
       }}
     >
       <Box
         sx={{
           overflow: "hidden",
           width: "100%",
-          height: "100vh",
+          height: "100%",
           position: "relative",
         }}
       >
@@ -61,7 +64,7 @@ const Carousel = () => {
           sx={{
             display: "flex",
             transition: "transform 0.5s ease-in-out",
-            height: "100%",
+            height: "100%", // Ensure full height is utilized
             transform: `translateX(-${currentIndex * 100}%)`,
           }}
         >
@@ -70,7 +73,7 @@ const Carousel = () => {
               key={index}
               sx={{
                 minWidth: "100%",
-                height: "100%",
+                height: "100%", // Ensure each slide takes up full height
                 position: "relative",
               }}
             >
@@ -80,7 +83,9 @@ const Carousel = () => {
                 alt={`Slide ${index + 1}`}
                 sx={{
                   width: "100%",
+                  height: "100%", // Force the image to take up full height
                   objectFit: "cover",
+                  objectPosition: index === 0 ? "top" : "center", // Align the first image to the top
                 }}
               />
               <Box
@@ -122,11 +127,37 @@ const Carousel = () => {
                 >
                   {slide.des}
                 </Typography>
+
+                {/* See More Button */}
+                <Box sx={{ marginTop: "20px" }}>
+                  <Button
+                    variant="contained"
+                    endIcon={<ArrowCircleRightIcon />}
+                    href={slide.path}
+                    sx={{
+                      background: `linear-gradient(91.83deg, rgb(255, 81, 47) 0%, rgb(221, 36, 118) 100%)`,
+                      textTransform: "none",
+                      borderRadius: "50px",
+                      fontSize: "1rem",
+                      px: [4],
+                      color: "#fff",
+                      zIndex: 1,
+                      border: "2px solid transparent",
+                      "&:hover": {
+                        background: "transparent",
+                        border: "2px solid #EF3D4E",
+                      },
+                    }}
+                  >
+                    See More
+                  </Button>
+                </Box>
               </Box>
             </Box>
           ))}
         </Box>
 
+        {/* Thumbnails with Titles & Descriptions */}
         <Box
           sx={{
             position: "absolute",
@@ -153,12 +184,12 @@ const Carousel = () => {
                 flexShrink: 0,
                 position: "relative",
                 cursor: "pointer",
-                borderRadius: "10px",
+                borderRadius: "20px",
                 overflow: "hidden",
                 border:
                   index === currentIndex
-                    ? "3px solid #6249CE"
-                    : "3px solid transparent",
+                    ? "5px solid #6249CE"
+                    : "5px solid transparent",
                 transition: "transform 0.3s",
                 scrollSnapAlign: "start",
                 "&:hover img": {
@@ -177,10 +208,27 @@ const Carousel = () => {
                   transition: "transform 0.3s",
                 }}
               />
+              <Box
+                sx={{
+                  position: "absolute",
+                  bottom: "10px",
+                  left: "10px",
+                  right: "10px",
+                  color: "#fff",
+                }}
+              >
+                <Typography sx={{ fontSize: "14px", fontWeight: 500 }}>
+                  {slide.thumbnailtitle}
+                </Typography>
+                <Typography sx={{ fontSize: "10px", fontWeight: 300 }}>
+                  {slide.thumbnaildesc}
+                </Typography>
+              </Box>
             </Box>
           ))}
         </Box>
 
+        {/* Progress Bar */}
         <Box
           sx={{
             position: "absolute",
@@ -195,7 +243,7 @@ const Carousel = () => {
               width: "100%",
               height: "100%",
               backgroundColor: "#f1683a",
-              animation: `${progressAnimation} ${TRANSITION_DURATION}ms linear forwards`,
+              animation: `${progressAnimation} ${AUTO_PLAY_INTERVAL}ms linear infinite`,
             }}
           />
         </Box>

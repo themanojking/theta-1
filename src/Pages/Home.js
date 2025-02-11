@@ -22,7 +22,7 @@ const Home = () => {
                 />
                 <Clusters />  
             </Box>
-            <Box sx={{ display: { xs: 'block', md: 'none' } }}>
+            <Box sx={{ display: { xs: 'block', md: 'none' ,mt:'20px' } }}>
                 <TitleWithDescription
                     title="Visit our Clusters"
                 />

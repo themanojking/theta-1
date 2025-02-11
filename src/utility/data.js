@@ -28,7 +28,7 @@ export const slides = [
   {
     img: "Assets/bg-4.png",
     title: "THETA Day 1",
-    topic: "DJ and Team Swaraag",
+    topic: "Team Swarag",
     des: "Musical Fusion : Unleash the Rhythm with Our Music Teams",
     buttons: ["SEE MORE"],
     thumbnailtitle: "Day 1",
@@ -36,9 +36,9 @@ export const slides = [
     path:'/Day1'
   },
   {
-    img: "Assets/dj.png",
+    img: "Assets/bg-2.png",
     title: "THETA Day 2",
-    topic: "DJ and Team Recoil",
+    topic: "Team Recoil",
     des: "Recoil in Action : Feel the Energy with Team Recoil's Electrifying Performance",
     buttons: ["SEE MORE"],
     thumbnailtitle: "Day 2",
