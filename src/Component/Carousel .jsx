@@ -49,7 +49,10 @@ const Carousel = () => {
         fontSize: "12px",
         margin: 0,
         position: "relative",
-        height: "100vh", // Ensures the height is full screen
+        height: "100vh", // Default height for larger screens
+        [theme.breakpoints.down("sm")]: {
+          height: "90vh", // Adjust height for small screens
+        },
       }}
     >
       <Box
