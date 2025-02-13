@@ -27,7 +27,7 @@ export const slides = [
   },
   {
     img: "Assets/bg-4.png",
-    title: "THETA Day 1",
+    title: "Theta Day 1",
     topic: "Team Swarag",
     des: "Musical Fusion : Unleash the Rhythm with Our Music Teams",
     buttons: ["SEE MORE"],
@@ -37,7 +37,7 @@ export const slides = [
   },
   {
     img: "Assets/bg-2.png",
-    title: "THETA Day 2",
+    title: "Theta Day 2",
     topic: "Team Recoil",
     des: "Recoil in Action : Feel the Energy with Team Recoil's Electrifying Performance",
     buttons: ["SEE MORE"],
@@ -47,7 +47,7 @@ export const slides = [
   },
   {
     img: "Assets/bg-3.jpg",
-    title: "THETA Day 3",
+    title: "Theta Day 3",
     topic: "Pro Nite",
     des: "Pro Nite : Experience the Ultimate Night of Fun and Excitement!",
     buttons: ["SEE MORE"],
