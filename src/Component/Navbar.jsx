@@ -38,7 +38,7 @@ function HideOnScroll(props) {
 }
 
 const ScrollToTop = () => {
-  window.scrollTo(0, 0);
+  window.scrollTo({ top: 0, behavior: "smooth" });
 };
 
 export default function Navbar(props) {
@@ -61,12 +61,16 @@ export default function Navbar(props) {
     setMobileOpen(!mobileOpen);
   };
 
+  const handleNavClick = () => {
+    ScrollToTop();
+    setMobileOpen(false);
+  };
+
   const navItems = [
     { link: "/", name: "Home" },
     !isMdUp && { link: "/Cluster", name: "Cluster" },
     { link: "/Workshops", name: "Workshops" },
     { link: "/ContactUs", name: "Contact Us" },
-    // { link: "/Developers", name: "Developers" },
   ].filter(Boolean);
 
   const drawer = (
@@ -77,21 +81,13 @@ export default function Navbar(props) {
           onClick={() => setMobileOpen(false)}
         />
       </Toolbar>
-      <List
-        sx={{ display: "flex", flexDirection: "column", alignItems: "center" }}
-      >
+      <List sx={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
         {navItems.map((item, index) => (
           <Link to={item.link} key={index} style={{ textDecoration: "none" }}>
-            <ListItem button onClick={() => setMobileOpen(false)}>
+            <ListItem button onClick={handleNavClick}>
               <ListItemText
                 primary={
-                  <Typography
-                    sx={{
-                      fontWeight: "bold",
-                      fontSize: "1.3rem",
-                      color: "#fff",
-                    }}
-                  >
+                  <Typography sx={{ fontWeight: "bold", fontSize: "1.3rem", color: "#fff" }}>
                     {item.name}
                   </Typography>
                 }
@@ -117,29 +113,15 @@ export default function Navbar(props) {
               color: isDown ? "#000" : color,
               bgcolor: isDown ? "rgba(255, 255, 255, 0.42)" : null,
               backdropFilter: isDown ? "blur(50px)" : null,
-              borderRadius: isDown
-                ? ["0 0 .7rem .7rem", "0 0 1.5rem 1.5rem"]
-                : null,
+              borderRadius: isDown ? ["0 0 .7rem .7rem", "0 0 1.5rem 1.5rem"] : null,
               boxShadow: isDown ? 3 : null,
               justifyContent: "space-between",
             }}
           >
-            <Stack
-              direction="row"
-              width="100%"
-              sx={{
-                display: ["flex", "flex", "none"],
-                justifyContent: "space-between",
-              }}
-            >
+            <Stack direction="row" width="100%" sx={{ display: ["flex", "flex", "none"], justifyContent: "space-between" }}>
               <Link to="/">
                 <ImageListItem>
-                  <Box
-                    component="img"
-                    src="/Assets/logo1.png"
-                    sx={{ width: "10%", ml: 2 }}
-                    alt="logo"
-                  />
+                  <Box component="img" src="/Assets/logo1.png" sx={{ width: "10%", ml: 2 }} alt="logo" />
                 </ImageListItem>
               </Link>
               <IconButton onClick={handleDrawerToggle} color="inherit">
@@ -148,12 +130,7 @@ export default function Navbar(props) {
             </Stack>
             <Link to="/">
               <ImageListItem sx={{ display: ["none", "none", "none", "flex"] }}>
-                <Box
-                  component="img"
-                  src="/Assets/logo1.png"
-                  sx={{ width: "12%", mt: 1 }}
-                  alt="logo"
-                />
+                <Box component="img" src="/Assets/logo1.png" sx={{ width: "12%", mt: 1 }} alt="logo" />
               </ImageListItem>
             </Link>
             <Box sx={{ display: { xs: "none", md: "flex", gap: "1rem" } }}>
@@ -161,15 +138,8 @@ export default function Navbar(props) {
                 <Button
                   key={index}
                   href={item.link}
-                  sx={{
-                    fontSize: [17],
-                    fontWeight: "600",
-                    color: isDown ? "#000" : color,
-                    textTransform: "none",
-                    textDecoration: "none",
-                    "&:hover": { backgroundColor: "rgba(255,255,255,0.1)" },
-                  }}
-                  onClick={ScrollToTop}
+                  sx={{ fontSize: [17], fontWeight: "600", color: isDown ? "#000" : color }}
+                  onClick={handleNavClick}
                 >
                   {item.name}
                 </Button>
@@ -187,13 +157,7 @@ export default function Navbar(props) {
           anchor="right"
           onClose={handleDrawerToggle}
           ModalProps={{ keepMounted: true }}
-          sx={{
-            "& .MuiDrawer-paper": {
-              boxSizing: "border-box",
-              width: "100%",
-              background: "#181818",
-            },
-          }}
+          sx={{ "& .MuiDrawer-paper": { boxSizing: "border-box", width: "100%", background: "#181818" } }}
         >
           {drawer}
         </Drawer>
@@ -201,4 +165,3 @@ export default function Navbar(props) {
     </>
   );
 }
-

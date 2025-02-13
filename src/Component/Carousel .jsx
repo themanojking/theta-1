@@ -108,8 +108,9 @@ const Carousel = () => {
                   variant="h2"
                   sx={{
                     fontWeight: "bold",
-                    lineHeight: "1.3em",
-                    letterSpacing: 2.5,
+                    lineHeight: "1.0em",
+                    letterSpacing: 1.8,
+                    fontFamily:  "Lora, serif",  // Custom font for titles
                   }}
                 >
                   {slide.title}
@@ -119,7 +120,8 @@ const Carousel = () => {
                   sx={{
                     fontWeight: "bold",
                     lineHeight: "1.3em",
-                    color: "#DBD3D3",
+                    color: "#f7ebe8",
+                     fontFamily:  "Lora, serif", 
                   }}
                 >
                   {slide.topic}

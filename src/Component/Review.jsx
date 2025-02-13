@@ -71,11 +71,7 @@ const Review = () => {
               {review.review}
             </Typography>
             <Box display="flex" alignItems="center">
-              <Avatar
-                src={review.avatar}
-                alt={review.name}
-                sx={{ width: 50, height: 50, marginRight: "10px" }}
-              />
+             
               <Box>
                 <Typography
                   sx={{

@@ -3,27 +3,25 @@ import { Box, Typography, IconButton } from "@mui/material";
 import HomeIcon from "@mui/icons-material/Home";
 import PhoneIcon from "@mui/icons-material/Phone";
 import EmailIcon from "@mui/icons-material/Email";
-import FacebookIcon from "@mui/icons-material/Facebook";
-import TwitterIcon from "@mui/icons-material/Twitter";
 import InstagramIcon from "@mui/icons-material/Instagram";
+import LinkedinIcon from "@mui/icons-material/LinkedIn";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 import Grid from "@mui/material/Grid";
 import { Link } from "react-router-dom";
 
 const navLinks = [
   { title: "Home", path: "/" },
-  { title: "Event", path: "/AllEvents" },
+  { title: "Workshops", path: "/Workshops" },
   { title: "Contact Us", path: "/ContactUs" },
 ];
 
 const UsefulLinks = [
   { title: "Sastra University", href: "https://src.sastra.edu/" },
-  { title: "Rules & Regulation", path: "/about" },
+  { title: "Rules & Regulation", path: "https://src.sastra.edu/" },
 ];
 
 const socialLinks = [
-  { Icon: FacebookIcon, url: "https://facebook.com" },
-  { Icon: TwitterIcon, url: "https://twitter.com" },
+  { Icon: LinkedinIcon, url: "https://www.linkedin.com/company/theta-src" },
   { Icon: InstagramIcon, url: "https://www.instagram.com/theta_src_official" },
   { Icon: YouTubeIcon, url: "https://www.youtube.com/@TeamEmulsion" },
 ];
@@ -141,9 +139,17 @@ const Footer = () => {
           </Grid>
         </Grid>
         <Box textAlign="center" mt={5}>
-          <Typography variant="body2">
-            Copyright © 2025 Theta | Designed and Developed by WebTEK
-          </Typography>
+        <Typography variant="body2">
+           Copyright &copy; 2025 Theta | Designed and Developed by{" "}
+          <Link
+            to="/Developers"
+            onClick={ScrollToTop}
+             style={{ color: "#FFB700", textDecoration: "none", fontWeight: "bold" ,fontSize: "1rem"}}
+  >
+    WebTEK
+  </Link>
+</Typography>
+
         </Box>
       </Box>
     </Box>

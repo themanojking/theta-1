@@ -21,39 +21,39 @@ export const slides = [
     topic: "2K25",
     des: "FUSION of ideas, FUN-filled experiences, and a grand FIESTA of celebration.",
     buttons: ["SEE MORE"],
-    thumbnailtitle: "Day",
+    thumbnailtitle: "Day 0",
     thumbnaildesc: "",
-    path:'/AllEvents'
+    path:'/Workshops'
   },
   {
     img: "Assets/bg-4.png",
-    title: "THETA Day 1",
+    title: "Theta Day 1",
     topic: "Team Swarag",
     des: "Musical Fusion : Unleash the Rhythm with Our Music Teams",
     buttons: ["SEE MORE"],
     thumbnailtitle: "Day 1",
     thumbnaildesc: "",
-    path:'/Day1'
+    path:'/Workshops'
   },
   {
     img: "Assets/bg-2.png",
-    title: "THETA Day 2",
+    title: "Theta Day 2",
     topic: "Team Recoil",
     des: "Recoil in Action : Feel the Energy with Team Recoil's Electrifying Performance",
     buttons: ["SEE MORE"],
     thumbnailtitle: "Day 2",
     thumbnaildesc: " ",
-     path:'/Day2'
+     path:'/Workshops'
   },
   {
     img: "Assets/bg-3.jpg",
-    title: "THETA Day 3",
+    title: "Theta Day 3",
     topic: "Pro Nite",
     des: "Pro Nite : Experience the Ultimate Night of Fun and Excitement!",
     buttons: ["SEE MORE"],
     thumbnailtitle: "Day 3",
     thumbnaildesc: "",
-     path:'/Day3'
+     path:'/Workshops'
   },
 ];
 
@@ -62,22 +62,21 @@ export const reviews = [
     id: 1,
     avatar: "https://randomuser.me/api/portraits/men/1.jpg",
     name: "",
-    role: "Student",
-    review:
-      "Theta is an amazing platform! The workshops are informative and fun! 🎉 I always leave feeling inspired.",
+    role: "-Student",
+    review:"Theta is an amazing platform! The workshops are informative and fun! 🎉 I always leave feeling inspired.",
   },
   {
     id: 2,
     avatar: "https://randomuser.me/api/portraits/women/2.jpg",
     name: "",
-    role: "Event Organizer",
+    role: "-Event Organizer",
     review: "The DJ events are electrifying! Can't wait for the next one! 🎶 Every performance is better than the last!",
   },
   {
     id: 3,
     avatar: "https://randomuser.me/api/portraits/men/3.jpg",
     name: "",
-    role: "Student",
+    role: "-Student",
     review:
       "The variety of workshops offered is impressive! I learned so much! It's a great way to meet new people too.",
   },
@@ -85,7 +84,7 @@ export const reviews = [
     id: 4,
     avatar: "https://randomuser.me/api/portraits/women/4.jpg",
     name: "",
-    role: "Art Student",
+    role: "-Art Student",
     review:
       "A fantastic experience! The events help us connect and express our creativity. I’ve made lifelong friends here.",
   },
@@ -93,7 +92,7 @@ export const reviews = [
     id: 5,
     avatar: "https://randomuser.me/api/portraits/men/5.jpg",
     name: "",
-    role: "Party Enthusiast",
+    role: "-Event Organizer",
     review:
       "Theta knows how to throw a party! The vibes are always on point! 🕺 I can’t recommend it enough to my friends.",
   },
@@ -101,14 +100,14 @@ export const reviews = [
     id: 6,
     avatar: "https://randomuser.me/api/portraits/women/6.jpg",
     name: "",
-    role: "Music Lover",
+    role: "-Student",
     review: "The DJs are top-notch! They keep the energy high all night long! You’ll always leave wanting more.",
   },
   {
     id: 7,
     avatar: "https://randomuser.me/api/portraits/men/7.jpg",
     name: "",
-    role: "Workshop Participant",
+    role: "-Workshop Participant",
     review:
       "Loved the hands-on approach in the workshops! Can't wait for more! It’s refreshing to learn in such an interactive environment.",
   },
@@ -116,7 +115,7 @@ export const reviews = [
     id: 8,
     avatar: "https://randomuser.me/api/portraits/women/8.jpg",
     name: "",
-    role: "Student",
+    role: "-Student",
     review:
       "Every event is a blast! I'm always looking forward to what Theta has next! 🎊 Their events are unforgettable experiences.",
   },

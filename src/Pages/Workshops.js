@@ -9,6 +9,7 @@ const Workshops = () => {
   const workshopData = [
     {
       title: "Interview Boot Camp for Three Days",
+      date: "Date : 14th-Feb-2022",
       time: "Time : 02:00 p.m. - 5:15 p.m.",
       venue: "Venue : Auditorium",
       description: "Access India",
@@ -17,12 +18,13 @@ const Workshops = () => {
     },
     {
       title: "AI-Powered Tech Development",
+      date: "Date : 22nd-Feb-2022",
       time: "Time : 09:00 a.m. - 5:00 p.m.",
       venue: "Venue : Auditorium",
       description: "Informatica",
       registrationLink: "https://forms.gle/d3eLwrQAurhRhYJz9 ",
     },
-    {
+   /* {
       title: "Comming soon",
       time: "",
       venue: "",
@@ -37,12 +39,12 @@ const Workshops = () => {
       registrationLink: "https://forms.gle/data_science",
     },
     {
-      title: " Comming soon ",
+      title: "Comming soon",
       time: "",
       venue: "",
       description: "Celebrating Soon",
       registrationLink: "https://forms.gle/data_science",
-    },
+    },*/
   ];
 
   return (
@@ -150,6 +152,16 @@ const Workshops = () => {
                 }}
               >
                 {workshop.title}
+              </Typography>
+              <Typography
+                sx={{
+                  fontSize: "1.2rem",
+                  fontWeight: 600,
+                  color: "#333",
+                  mb: 1,
+                }}
+              >
+                {workshop.date}
               </Typography>
               <Typography
                 sx={{
