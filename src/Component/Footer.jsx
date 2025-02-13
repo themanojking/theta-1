@@ -1,23 +1,33 @@
 import React, { useEffect, useState } from "react";
-import { Box, Typography, TextField, Button, IconButton } from "@mui/material";
+import { Box, Typography, IconButton } from "@mui/material";
 import HomeIcon from "@mui/icons-material/Home";
 import PhoneIcon from "@mui/icons-material/Phone";
 import EmailIcon from "@mui/icons-material/Email";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import TwitterIcon from "@mui/icons-material/Twitter";
-import PinterestIcon from "@mui/icons-material/Pinterest";
+import InstagramIcon from "@mui/icons-material/Instagram";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 import Grid from "@mui/material/Grid";
 import { Link } from "react-router-dom";
+
 const navLinks = [
   { title: "Home", path: "/" },
   { title: "Event", path: "/AllEvents" },
   { title: "Contact Us", path: "/ContactUs" },
 ];
+
 const UsefulLinks = [
-  { title: "Sastra University", href: "https://www.sastra.edu/" },
+  { title: "Sastra University", href: "https://src.sastra.edu/" },
   { title: "Rules & Regulation", path: "/about" },
 ];
+
+const socialLinks = [
+  { Icon: FacebookIcon, url: "https://facebook.com" },
+  { Icon: TwitterIcon, url: "https://twitter.com" },
+  { Icon: InstagramIcon, url: "https://www.instagram.com/theta_src_official" },
+  { Icon: YouTubeIcon, url: "https://www.youtube.com/@TeamEmulsion" },
+];
+
 const ScrollToTop = () => {
   window.scrollTo(0, 0);
 };
@@ -41,22 +51,14 @@ const Footer = () => {
     <Box sx={{ bgcolor: "#000212", color: "white", px: { xs: 2 } }}>
       <Box sx={{ py: 5 }}>
         <Grid container spacing={4} justifyContent="center">
-          <Grid
-            item
-            xs={12}
-            sm={6}
-            md={4}
-            data-aos="fade-right"
-            data-aos-duration={isMobile || isTablet ? "1000" : "1500"}
-            data-aos-easing="ease-in-sine"
-          >
+          <Grid item xs={12} sm={6} md={4}>
             <Typography variant="h6" gutterBottom>
               Techno-management fest of SASTRA-SRC Deemed to be University 
             </Typography>
             <Box display="flex" alignItems="center" mt={2}>
               <HomeIcon />
               <Typography sx={{ ml: 2 }}>
-              Kumbakonam - 612001. Tamilnadu India .
+                Kumbakonam - 612001. Tamilnadu India .
               </Typography>
             </Box>
             <Box display="flex" alignItems="center" mt={1}>
@@ -68,147 +70,52 @@ const Footer = () => {
               <Typography sx={{ ml: 2 }}>theta@src.sastra.ac.in</Typography>
             </Box>
           </Grid>
-          <Grid
-            item
-            xs={12}
-            sm={6}
-            md={2}
-            data-aos="fade-right"
-            data-aos-duration={isMobile || isTablet ? "1000" : "2000"}
-            data-aos-easing="ease-in-sine"
-          >
+          <Grid item xs={12} sm={6} md={2}>
             <Typography variant="h6" gutterBottom>
               Quick Links
             </Typography>
             {navLinks.map((item, index) => (
-              <Typography
-                key={index}
-                sx={{
-                  mb: 1,
-                  "& a": {
-                    color: "#fff",
-                    textDecoration: "none",
-                    "&:hover": {
-                      color: "#EF3D4E",
-                      transition: "color 0.3s ease",
-                    },
-                  },
-                }}
-              >
-                <Link to={item.path} onClick={ScrollToTop}>
+              <Typography key={index} sx={{ mb: 1 }}>
+                <Link to={item.path} onClick={ScrollToTop} style={{ color: "#fff", textDecoration: "none" }}>
                   {item.title}
                 </Link>
               </Typography>
             ))}
           </Grid>
-
-          <Grid
-            item
-            xs={12}
-            sm={6}
-            md={2}
-            data-aos="fade-right"
-            data-aos-duration={isMobile || isTablet ? "1000" : "2000"}
-            data-aos-easing="ease-in-sine"
-          >
+          <Grid item xs={12} sm={6} md={2}>
             <Typography variant="h6" gutterBottom>
               Useful links
             </Typography>
             {UsefulLinks.map((item, index) => (
-              <Typography
-                key={index}
-                sx={{
-                  mb: 1,
-                  "& a": {
-                    color: "#fff",
-                    textDecoration: "none",
-                    "&:hover": {
-                      color: "#EF3D4E",
-                      transition: "color 0.3s ease",
-                    },
-                  },
-                }}
-              >
-                <Link href={item.path} onClick={ScrollToTop}>
-                  {item.title}
-                </Link>
+              <Typography key={index} sx={{ mb: 1 }}>
+                {item.href ? (
+                  <a href={item.href} target="_blank" rel="noopener noreferrer" style={{ color: "#fff", textDecoration: "none" }}>
+                    {item.title}
+                  </a>
+                ) : (
+                  <Link to={item.path} onClick={ScrollToTop} style={{ color: "#fff", textDecoration: "none" }}>
+                    {item.title}
+                  </Link>
+                )}
               </Typography>
             ))}
           </Grid>
-
-          <Grid
-            item
-            xs={12}
-            sm={6}
-            md={3}
-            data-aos="fade-right"
-            data-aos-duration={isMobile || isTablet ? "1000" : "3000"}
-            data-aos-easing="ease-in-sine"
-          >
+          <Grid item xs={12} sm={6} md={3}>
             <Typography variant="h6" gutterBottom>
-              Newsletter Subscribe
+              Subscribe for latest updates
             </Typography>
-            <Typography gutterBottom>Subscribe for latest upadates</Typography>
-            <Box display="flex" mt={2}>
-              <TextField
-                variant="outlined"
-                placeholder="Your Email"
-                size="small"
-                fullWidth
-                sx={{
-                  bgcolor: "white",
-                  borderRadius: "4px",
-                  mr: 1,
-                }}
-              />
-              <Button
-                variant="contained"
-                sx={{
-                  bgcolor: "#FFB700",
-                  "&:hover": {
-                    bgcolor: "#FFB700",
-                    transition: "background-color 0.3s ease",
-                  },
-                }}
-              >
-                →
-              </Button>
-            </Box>
             <Box mt={2} display="flex" justifyContent="flex-start">
-              {[FacebookIcon, TwitterIcon, PinterestIcon, YouTubeIcon].map(
-                (Icon, index) => (
-                  <IconButton
-                    key={index}
-                    color="inherit"
-                    sx={{
-                      mr: 1,
-                      "&:hover": {
-                        color: "#FFB700",
-                        transition: "color 0.3s ease",
-                      },
-                    }}
-                  >
-                    <Icon />
-                  </IconButton>
-                )
-              )}
+              {socialLinks.map(({ Icon, url }, index) => (
+                <IconButton key={index} color="inherit" component="a" href={url} target="_blank" rel="noopener noreferrer" sx={{ mr: 1, "&:hover": { color: "#FFB700", transition: "color 0.3s ease" } }}>
+                  <Icon />
+                </IconButton>
+              ))}
             </Box>
           </Grid>
         </Grid>
-
         <Box textAlign="center" mt={5}>
           <Typography variant="body2">
-            Copyright © 2025 Theta | Designed and Developed by{" "}
-            <a
-            
-              style={{
-                color: "#fff",
-                fontWeight: "600",
-                textDecoration: "none",
-              }}
-            >
-              Webtek Team 2k25
-            </a>
+            Copyright © 2025 Theta | Designed and Developed by WebTEK
           </Typography>
         </Box>
       </Box>
