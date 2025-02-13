@@ -9,32 +9,37 @@ import Footer from '.././Component/Footer';
 const Workshops = () => {
     const workshopData = [
         {
-            title: 'Interview Boot Camp for 3 days',
-            date: '02:00 p.m. - 5:15 p.m. |  Venue: Auditorium',
+            title: 'Interview Boot Camp for Three days',
+            time: 'Time : 02:00 p.m. - 5:15 p.m.',
+            venue: 'Venue : Auditorium',
             description: 'Access India',
             registrationLink: 'https://docs.google.com/forms/d/1ot95aeKCJxycCAaxcvkUc7ymU4XHtIXGVFpblNlVDMM/edit?chromeless=1'
         },
         {
             title: 'Ai powered Tech Development',
-            date: '09:00 a.m. - 5:00 p.m. |  Venue: Auditorium',
+            time: 'Time : 09:00 a.m. - 5:00 p.m.',
+            venue: 'Venue : Auditorium',
             description: 'Informatica',
             registrationLink: 'https://forms.gle/d3eLwrQAurhRhYJz9 '
         },
         {
             title: 'Comming soon',
-            date: '',
+            time: '',
+            venue: '',
             description: 'Celebrating Soon',
             registrationLink: ''
         },
         {
             title: 'Comming soon',
-            date: '',
+            time: '',
+            venue: '',
             description: 'Celebrating Soon',
             registrationLink: 'https://forms.gle/data_science'
         },
         {
             title: ' Comming soon ',
-            date: '',
+            time: '',
+            venue: '',
             description: 'Celebrating Soon',
             registrationLink: 'https://forms.gle/data_science'
         },
@@ -109,7 +114,8 @@ const Workshops = () => {
                             }}
                         >
                             <Typography sx={{ fontSize: '2rem', fontWeight: 'bold', color: '#333', mb: 1 }}>{workshop.title}</Typography>
-                            <Typography sx={{ fontSize: '1.2rem', color: '#333', fontWeight: 600, mb: 2.5 }}>{workshop.date}</Typography>
+                            <Typography sx={{ fontSize: '1.2rem', color: '#333', fontWeight: 600, mb: 2.5 }}>{workshop.time}</Typography>
+                            <Typography sx={{ fontSize: '1.2rem', color: '#333', fontWeight: 800, mb: 2.5 }}>{workshop.venue}</Typography>
                             <Typography sx={{ fontSize: '1.3rem', color: '#9C79A1', fontWeight: 700, mb: 3 }}>{workshop.description}</Typography>
                             <Button
                                 variant="contained"
