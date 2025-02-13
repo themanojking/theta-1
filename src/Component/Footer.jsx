@@ -35,7 +35,7 @@ const ScrollToTop = () => {
 const Footer = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 600);
   const [isTablet, setIsTablet] = useState(
-    window.innerWidth >= 600 && window.innerWidth < 960
+    window.innerWidth >= 600 && window.innerWidth < 960,
   );
   const handleResize = () => {
     setIsMobile(window.innerWidth < 600);
@@ -53,12 +53,12 @@ const Footer = () => {
         <Grid container spacing={4} justifyContent="center">
           <Grid item xs={12} sm={6} md={4}>
             <Typography variant="h6" gutterBottom>
-              Techno-management fest of SASTRA-SRC Deemed to be University 
+              National Level Techno-Management Fest, Theta
             </Typography>
             <Box display="flex" alignItems="center" mt={2}>
               <HomeIcon />
               <Typography sx={{ ml: 2 }}>
-                Kumbakonam - 612001. Tamilnadu India .
+                SASTRA Deemed to be University, SRC, Kumbakonam - 612001.
               </Typography>
             </Box>
             <Box display="flex" alignItems="center" mt={1}>
@@ -76,7 +76,11 @@ const Footer = () => {
             </Typography>
             {navLinks.map((item, index) => (
               <Typography key={index} sx={{ mb: 1 }}>
-                <Link to={item.path} onClick={ScrollToTop} style={{ color: "#fff", textDecoration: "none" }}>
+                <Link
+                  to={item.path}
+                  onClick={ScrollToTop}
+                  style={{ color: "#fff", textDecoration: "none" }}
+                >
                   {item.title}
                 </Link>
               </Typography>
@@ -89,11 +93,20 @@ const Footer = () => {
             {UsefulLinks.map((item, index) => (
               <Typography key={index} sx={{ mb: 1 }}>
                 {item.href ? (
-                  <a href={item.href} target="_blank" rel="noopener noreferrer" style={{ color: "#fff", textDecoration: "none" }}>
+                  <a
+                    href={item.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ color: "#fff", textDecoration: "none" }}
+                  >
                     {item.title}
                   </a>
                 ) : (
-                  <Link to={item.path} onClick={ScrollToTop} style={{ color: "#fff", textDecoration: "none" }}>
+                  <Link
+                    to={item.path}
+                    onClick={ScrollToTop}
+                    style={{ color: "#fff", textDecoration: "none" }}
+                  >
                     {item.title}
                   </Link>
                 )}
@@ -106,7 +119,21 @@ const Footer = () => {
             </Typography>
             <Box mt={2} display="flex" justifyContent="flex-start">
               {socialLinks.map(({ Icon, url }, index) => (
-                <IconButton key={index} color="inherit" component="a" href={url} target="_blank" rel="noopener noreferrer" sx={{ mr: 1, "&:hover": { color: "#FFB700", transition: "color 0.3s ease" } }}>
+                <IconButton
+                  key={index}
+                  color="inherit"
+                  component="a"
+                  href={url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  sx={{
+                    mr: 1,
+                    "&:hover": {
+                      color: "#FFB700",
+                      transition: "color 0.3s ease",
+                    },
+                  }}
+                >
                   <Icon />
                 </IconButton>
               ))}
