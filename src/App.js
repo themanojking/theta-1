@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useEffect } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
@@ -15,6 +16,26 @@ import ContactUs from "./Pages/ContactUs";
 import Workshops from "./Pages/Workshops";
 import Developers from "./Pages/Developers ";
 import Cluster from "./Pages/Cluster";
+=======
+import { useEffect } from 'react';
+import { Analytics } from "@vercel/analytics/react"
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import './App.css';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import Home from './Pages/Home';
+import Emulsion from './Pages/ClustersPages/Emulsion';
+import Informatica from './Pages/ClustersPages/Informatica';
+import Robotics from './Pages/ClustersPages/Robotics';
+import AllEvents from './Pages/EventsPages/AllEvents';
+import Day1 from './Pages/EventsPages/Day1';
+import Day2 from './Pages/EventsPages/Day2';
+import Day3 from './Pages/EventsPages/Day3';
+import ContactUs from './Pages/ContactUs';
+import Workshops from './Pages/Workshops';
+import Developers from './Pages/Developers ';
+import Cluster from './Pages/Cluster';
+>>>>>>> upstream/main
 function App() {
   useEffect(() => {
     AOS.init({ duration: 1000 });
@@ -36,6 +57,7 @@ function App() {
         <Route path="/Developers" element={<Developers />} />
         <Route path="/Cluster" element={<Cluster />} />
       </Routes>
+      <Analytics />
     </BrowserRouter>
   );
 }
