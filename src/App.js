@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { Analytics } from "@vercel/analytics/react"
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 import AOS from 'aos';
