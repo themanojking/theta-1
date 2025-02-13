@@ -1,5 +1,6 @@
 import * as React from "react";
 import { useState, useEffect } from "react";
+import DevBtn from "./DevBtn";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
@@ -45,7 +46,7 @@ export default function Navbar(props) {
   const [isDown, setIsDown] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const theme = useTheme();
-  const isMdUp = useMediaQuery(theme.breakpoints.up('md'));
+  const isMdUp = useMediaQuery(theme.breakpoints.up("md"));
 
   useEffect(() => {
     const handleScroll = () => {
@@ -65,23 +66,32 @@ export default function Navbar(props) {
     !isMdUp && { link: "/Cluster", name: "Cluster" },
     { link: "/Workshops", name: "Workshops" },
     { link: "/ContactUs", name: "Contact Us" },
-    { link: "/Developers", name: "Developers" },
+    // { link: "/Developers", name: "Developers" },
   ].filter(Boolean);
-
-
 
   const drawer = (
     <Stack direction="column">
       <Toolbar sx={{ display: "flex", justifyContent: "flex-end", pr: 2 }}>
-        <CloseIcon sx={{ color: "#fff" }} onClick={() => setMobileOpen(false)} />
+        <CloseIcon
+          sx={{ color: "#fff" }}
+          onClick={() => setMobileOpen(false)}
+        />
       </Toolbar>
-      <List sx={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
+      <List
+        sx={{ display: "flex", flexDirection: "column", alignItems: "center" }}
+      >
         {navItems.map((item, index) => (
           <Link to={item.link} key={index} style={{ textDecoration: "none" }}>
             <ListItem button onClick={() => setMobileOpen(false)}>
               <ListItemText
                 primary={
-                  <Typography sx={{ fontWeight: "bold", fontSize: "1.3rem", color: "#fff" }}>
+                  <Typography
+                    sx={{
+                      fontWeight: "bold",
+                      fontSize: "1.3rem",
+                      color: "#fff",
+                    }}
+                  >
                     {item.name}
                   </Typography>
                 }
@@ -89,6 +99,7 @@ export default function Navbar(props) {
             </ListItem>
           </Link>
         ))}
+        <DevBtn />
       </List>
     </Stack>
   );
@@ -106,15 +117,29 @@ export default function Navbar(props) {
               color: isDown ? "#000" : color,
               bgcolor: isDown ? "rgba(255, 255, 255, 0.42)" : null,
               backdropFilter: isDown ? "blur(50px)" : null,
-              borderRadius: isDown ? ["0 0 .7rem .7rem", "0 0 1.5rem 1.5rem"] : null,
+              borderRadius: isDown
+                ? ["0 0 .7rem .7rem", "0 0 1.5rem 1.5rem"]
+                : null,
               boxShadow: isDown ? 3 : null,
               justifyContent: "space-between",
             }}
           >
-            <Stack direction="row" width="100%" sx={{ display: ["flex", "flex", "none"], justifyContent: "space-between" }}>
+            <Stack
+              direction="row"
+              width="100%"
+              sx={{
+                display: ["flex", "flex", "none"],
+                justifyContent: "space-between",
+              }}
+            >
               <Link to="/">
                 <ImageListItem>
-                  <Box component="img" src="/Assets/logo1.png" sx={{ width: "10%", ml: 2 }} alt="logo" />
+                  <Box
+                    component="img"
+                    src="/Assets/logo1.png"
+                    sx={{ width: "10%", ml: 2 }}
+                    alt="logo"
+                  />
                 </ImageListItem>
               </Link>
               <IconButton onClick={handleDrawerToggle} color="inherit">
@@ -123,7 +148,12 @@ export default function Navbar(props) {
             </Stack>
             <Link to="/">
               <ImageListItem sx={{ display: ["none", "none", "none", "flex"] }}>
-                <Box component="img" src="/Assets/logo1.png" sx={{ width: "12%", mt: 1 }} alt="logo" />
+                <Box
+                  component="img"
+                  src="/Assets/logo1.png"
+                  sx={{ width: "12%", mt: 1 }}
+                  alt="logo"
+                />
               </ImageListItem>
             </Link>
             <Box sx={{ display: { xs: "none", md: "flex", gap: "1rem" } }}>
@@ -144,6 +174,7 @@ export default function Navbar(props) {
                   {item.name}
                 </Button>
               ))}
+              <DevBtn />
             </Box>
           </Toolbar>
         </AppBar>
@@ -156,7 +187,13 @@ export default function Navbar(props) {
           anchor="right"
           onClose={handleDrawerToggle}
           ModalProps={{ keepMounted: true }}
-          sx={{ "& .MuiDrawer-paper": { boxSizing: "border-box", width: "100%", background: "#181818" } }}
+          sx={{
+            "& .MuiDrawer-paper": {
+              boxSizing: "border-box",
+              width: "100%",
+              background: "#181818",
+            },
+          }}
         >
           {drawer}
         </Drawer>
@@ -164,3 +201,4 @@ export default function Navbar(props) {
     </>
   );
 }
+
