@@ -53,12 +53,12 @@ const Footer = () => {
         <Grid container spacing={4} justifyContent="center">
           <Grid item xs={12} sm={6} md={4}>
             <Typography variant="h6" gutterBottom>
-              Techno-management fest of SASTRA-SRC Deemed to be University
+              National Level Techno-Management Fest, Theta
             </Typography>
             <Box display="flex" alignItems="center" mt={2}>
               <HomeIcon />
               <Typography sx={{ ml: 2 }}>
-                Kumbakonam, Tamilnadu, India - 612001.
+                SASTRA Deemed to be University, SRC, Kumbakonam - 612001.
               </Typography>
             </Box>
             <Box display="flex" alignItems="center" mt={1}>
