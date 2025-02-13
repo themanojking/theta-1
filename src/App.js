@@ -37,6 +37,7 @@ function App() {
         <Route path='/Developers' element={<Developers />} />
         <Route path='/Cluster' element={<Cluster />} />
       </Routes>
+      <Analytics />
     </BrowserRouter>
   );
 }
