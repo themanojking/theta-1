@@ -61,16 +61,11 @@ export default function Navbar(props) {
     setMobileOpen(!mobileOpen);
   };
 
-  const handleNavClick = () => {
-    ScrollToTop();
-    setMobileOpen(false);
-  };
-
   const navItems = [
     { link: "/", name: "Home" },
     !isMdUp && { link: "/Cluster", name: "Cluster" },
     { link: "/Workshops", name: "Workshops" },
-    { link: "/ContactUs", name: "Contact Us" },
+    { link: "/ContactUs", name: "Contact" },
   ].filter(Boolean);
 
   const drawer = (
@@ -81,13 +76,26 @@ export default function Navbar(props) {
           onClick={() => setMobileOpen(false)}
         />
       </Toolbar>
-      <List sx={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
+      <List
+        sx={{ display: "flex", flexDirection: "column", alignItems: "center" }}
+      >
         {navItems.map((item, index) => (
-          <Link to={item.link} key={index} style={{ textDecoration: "none" }}>
-            <ListItem button onClick={handleNavClick}>
+          <Link
+            to={item.link}
+            key={index}
+            onClick={ScrollToTop}
+            style={{ textDecoration: "none" }}
+          >
+            <ListItem>
               <ListItemText
                 primary={
-                  <Typography sx={{ fontWeight: "bold", fontSize: "1.3rem", color: "#fff" }}>
+                  <Typography
+                    sx={{
+                      fontWeight: "bold",
+                      fontSize: "1.3rem",
+                      color: "#fff",
+                    }}
+                  >
                     {item.name}
                   </Typography>
                 }
@@ -108,37 +116,74 @@ export default function Navbar(props) {
           <Toolbar
             sx={{
               backgroundColor: "transparent",
-              py: [0, 0, 2, 1, 1],
-              px: [0, 1, 1, 6, "10%"],
+              py: [0, 0, 2, 1, 0],
+              px: [0, 1, 1, 6, 4],
               color: isDown ? "#000" : color,
               bgcolor: isDown ? "rgba(255, 255, 255, 0.42)" : null,
               backdropFilter: isDown ? "blur(50px)" : null,
-              borderRadius: isDown ? ["0 0 .7rem .7rem", "0 0 1.5rem 1.5rem"] : null,
+              borderRadius: isDown
+                ? ["0 0 .7rem .7rem", "0 0 1.5rem 1.5rem"]
+                : null,
               boxShadow: isDown ? 3 : null,
               justifyContent: "space-between",
             }}
           >
-            <Stack direction="row" width="100%" sx={{ display: ["flex", "flex", "none"], justifyContent: "space-between" }}>
+            <Stack
+              direction="row"
+              width="100%"
+              sx={{
+                display: ["flex", "flex", "none"],
+                justifyContent: "space-between",
+              }}
+            >
               <Link to="/">
                 <ImageListItem>
-                  <Box component="img" src="/Assets/logo1.png" sx={{ width: "10%", ml: 2 }} alt="logo" />
+                  <Box
+                    component="img"
+                    src="/Assets/logo1.png"
+                    sx={{ width: "50px", ml: 2 }}
+                    alt="logo"
+                  />
                 </ImageListItem>
               </Link>
+              {/* <a href="https://src.sastra.edu/">
+            <ImageListItem sx={{ display: ["flex","flex","none"] }}>
+              <Box
+                component="img"
+                src="/Assets/clg_logo.png"
+                sx={{
+                  width: "10rem",
+                  my:1,
+                  borderRadius: "8px",
+                }}
+                alt="logo"
+              />
+            </ImageListItem>
+          </a> */}
               <IconButton onClick={handleDrawerToggle} color="inherit">
                 <MenuIcon />
               </IconButton>
             </Stack>
             <Link to="/">
               <ImageListItem sx={{ display: ["none", "none", "none", "flex"] }}>
-                <Box component="img" src="/Assets/logo1.png" sx={{ width: "12%", mt: 1 }} alt="logo" />
+                <Box
+                  component="img"
+                  src="/Assets/logo1.png"
+                  sx={{ width: "6rem" }}
+                  alt="logo"
+                />
               </ImageListItem>
             </Link>
-            <Box sx={{ display: { xs: "none", md: "flex", gap: "1rem" } }}>
+            <Box sx={{ display: { xs: "none", md: "flex", gap: "2rem" } }}>
               {navItems.map((item, index) => (
                 <Button
                   key={index}
                   href={item.link}
-                  sx={{ fontSize: [17], fontWeight: "600", color: isDown ? "#000" : color }}
+                  sx={{
+                    fontSize: [17],
+                    fontWeight: "600",
+                    color: isDown ? "#000" : color,
+                  }}
                   onClick={ScrollToTop}
                 >
                   {item.name}
@@ -157,7 +202,13 @@ export default function Navbar(props) {
           anchor="right"
           onClose={handleDrawerToggle}
           ModalProps={{ keepMounted: true }}
-          sx={{ "& .MuiDrawer-paper": { boxSizing: "border-box", width: "100%", background: "#181818" } }}
+          sx={{
+            "& .MuiDrawer-paper": {
+              boxSizing: "border-box",
+              width: "100%",
+              background: "#181818",
+            },
+          }}
         >
           {drawer}
         </Drawer>

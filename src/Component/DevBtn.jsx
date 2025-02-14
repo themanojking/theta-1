@@ -1,12 +1,17 @@
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const DevBtn = () => {
-  const navigate = useNavigate();
-
+  const ScrollToTop = () => {
+    window.scrollTo(0, 0);
+  };
   return (
-    <button className="dev-btn" onClick={() => navigate("/developers")}>
-      Developers
-    </button>
+    <Link
+      to="/Developers"
+      onClick={ScrollToTop}
+      style={{ textDecoration: "none" }}
+    >
+      <button className="dev-btn">Developers</button>
+    </Link>
   );
 };
 

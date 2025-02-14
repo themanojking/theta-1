@@ -164,74 +164,80 @@ const Carousel = () => {
 
         {/* Thumbnails with Titles & Descriptions */}
         <Box
-          sx={{
-            position: "absolute",
-            bottom: ["10px", "30px"],
-            left: "50%",
-            transform: "translateX(-50%)",
-            display: "flex",
-            gap: "10px",
-            zIndex: 100,
-            overflowX: "auto",
-            scrollSnapType: "x mandatory",
-            "&::-webkit-scrollbar": {
-              display: "none",
-            },
-          }}
-        >
-          {slides.map((slide, index) => (
-            <Box
-              key={index}
-              onClick={() => setCurrentIndex(index)}
-              sx={{
-                width: { xs: "70px", sm: "100px" },
-                height: { xs: "100px", sm: "150px" },
-                flexShrink: 0,
-                position: "relative",
-                cursor: "pointer",
-                borderRadius: "20px",
-                overflow: "hidden",
-                border:
-                  index === currentIndex
-                    ? "5px solid #6249CE"
-                    : "5px solid transparent",
-                transition: "transform 0.3s",
-                scrollSnapAlign: "start",
-                "&:hover img": {
-                  transform: "scale(1.05)",
-                },
-              }}
-            >
-              <Box
-                component="img"
-                src={slide.img}
-                alt={`Thumbnail ${index + 1}`}
-                sx={{
-                  width: "100%",
-                  height: "100%",
-                  objectFit: "cover",
-                  transition: "transform 0.3s",
-                }}
-              />
-              <Box
-                sx={{
-                  position: "absolute",
-                  bottom: "10px",
-                  left: "10px",
-                  right: "10px",
-                  color: "#fff",
-                }}
-              >
-                <Typography sx={{ fontSize: "14px", fontWeight: 500 }}>
-                  {slide.thumbnailtitle}
-                </Typography>
-                <Typography sx={{ fontSize: "10px", fontWeight: 300 }}>
-                  {slide.thumbnaildesc}
-                </Typography>
-              </Box>
-            </Box>
-          ))}
-        </Box>
+  sx={{
+    position: "absolute",
+    bottom: ["10px", "30px"],
+    left: "50%",
+    transform: "translateX(-50%)",
+    display: "flex",
+    gap: "10px",
+    zIndex: 100,
+    overflowX: "auto",
+    scrollSnapType: "x mandatory",
+    "&::-webkit-scrollbar": {
+      display: "none",
+    },
+  }}
+>
+  {slides.map((slide, index) => (
+    <Box
+      key={index}
+      onClick={() => setCurrentIndex(index)}
+      sx={{
+        width: { xs: "70px", sm: "100px" },
+        height: { xs: "100px", sm: "150px" },
+        flexShrink: 0,
+        position: "relative",
+        cursor: "pointer",
+        borderRadius: "20px",
+        overflow: "hidden",
+        border: "5px solid transparent",
+        transition: "transform 0.3s",
+        scrollSnapAlign: "start",
+        "&:hover img": {
+          transform: "scale(1.05)",
+        },
+        ...(index === currentIndex && {
+          animation: "borderAnimation 1.5s infinite linear",
+        }),
+        "@keyframes borderAnimation": {
+          "0%": { borderColor: "#6249CE" },
+          "50%": { borderColor: "transparent" },
+          "100%": { borderColor: "#6249CE" },
+        },
+      }}
+    >
+      <Box
+        component="img"
+        src={slide.img}
+        alt={`Thumbnail ${index + 1}`}
+        sx={{
+          width: "100%",
+          height: "100%",
+          objectFit: "cover",
+          transition: "transform 0.3s",
+        }}
+      />
+      <Box
+        sx={{
+          position: "absolute",
+          bottom: "10px",
+          left: "10px",
+          right: "10px",
+          color: "#fff",
+        }}
+      >
+        <Typography sx={{ fontSize: "14px", fontWeight: 500 }}>
+          {slide.thumbnailtitle}
+        </Typography>
+        <Typography sx={{ fontSize: "10px", fontWeight: 300 }}>
+          {slide.thumbnaildesc}
+        </Typography>
+      </Box>
+    </Box>
+  ))}
+</Box>
+
 
         {/* Progress Bar */}
         <Box

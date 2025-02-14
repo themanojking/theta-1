@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
-import { Grid, Card, CardContent, Typography, Box,  TextField } from '@mui/material';
+import { Grid, Card, CardContent, Typography, Box,  TextField, Divider } from '@mui/material';
 import HomeIcon from '@mui/icons-material/Home';
 import PhoneIcon from '@mui/icons-material/Phone';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
@@ -111,8 +111,8 @@ const ContactUs = () => {
 
     return (
         <>
-            <ThemeProvider theme={theme}>
-                <CssBaseline />
+     
+               
                 <Box
                     sx={{
                         position: "relative",
@@ -226,11 +226,52 @@ const ContactUs = () => {
                             ))}
                         </Grid>
                     </Box>
-                    
+                    <Box sx={{ bgcolor: "#000212" }}>
+                <Box sx={{ display: 'flex', justifyContent: 'center', alignContent: "center", py: 5}}>
+                    <Divider
+                        variant="middle"
+                        component="li"
+                        sx={{
+                            borderColor: '#282828',
+                            width: '92%',
+                            position: 'relative',
+                            transition: 'transform 0.3s ease',
+                            '&:hover': {
+                                transform: 'scaleY(1.1)',
+                            },
+                            '&::before': {
+                                content: '""',
+                                position: 'absolute',
+                                width: '30%',
+                                height: '2px',
+                                backgroundColor: '#FFD700',
+                                top: '50%',
+                                left: '0',
+                                transform: 'translateY(-50%)',
+                                transition: 'width 0.3s ease',
+                            },
+                            '&::after': {
+                                content: '""',
+                                position: 'absolute',
+                                width: '30%',
+                                height: '2px',
+                                backgroundColor: '#FFD700',
+                                top: '50%',
+                                right: '0',
+                                transform: 'translateY(-50%)',
+                                transition: 'width 0.3s ease',
+                            },
+                            '&:hover::before, &:hover::after': {
+                                width: '40%',
+                            },
+                        }}
+                    />
+                </Box>
+            </Box> 
                    
                 </Box>
                 <Footer />
-            </ThemeProvider>
+       
         </>
     );
 };
