@@ -15,6 +15,7 @@ import ContactUs from "./Pages/ContactUs";
 import Workshops from "./Pages/Workshops";
 import Developers from "./Pages/Developers ";
 import Cluster from "./Pages/Cluster";
+import NotFound from "./Component/NotFound";
 
 function App() {
   useEffect(() => {
@@ -36,6 +37,7 @@ function App() {
         <Route path="/Workshops" element={<Workshops />} />
         <Route path="/Developers" element={<Developers />} />
         <Route path="/Cluster" element={<Cluster />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
   );
