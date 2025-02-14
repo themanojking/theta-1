@@ -38,7 +38,7 @@ function HideOnScroll(props) {
 }
 
 const ScrollToTop = () => {
-  window.scrollTo({ top: 0, behavior: "smooth" });
+  window.scrollTo(0, 0);
 };
 
 export default function Navbar(props) {
