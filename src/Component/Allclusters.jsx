@@ -5,6 +5,8 @@ import { keyframes } from "@emotion/react";
 import ArrowCircleRightIcon from "@mui/icons-material/ArrowCircleRight";
 
 const AnimatedCard = styled(Box)(({ theme }) => ({
+
+
   height: "450px",
   width: "350px",
   background: "#222",
