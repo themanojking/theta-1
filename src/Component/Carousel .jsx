@@ -253,6 +253,7 @@ const Carousel = () => {
             sx={{
               width: "100%",
               height: "100%",
+              
               backgroundColor: "#f1683a",
               animation: `${progressAnimation} ${AUTO_PLAY_INTERVAL}ms linear infinite`,
             }}
